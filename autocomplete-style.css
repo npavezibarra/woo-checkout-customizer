@@ -1,0 +1,55 @@
+/* Style the autocomplete input */
+#billing_city.ui-autocomplete-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    border: 1px solid #ddd;
+    background: white;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Remove any left padding */
+}
+
+.autocomplete-dropdown li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.autocomplete-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* SACAR INPUT */
+
+.wc-block-checkout__billing-fields .wc-block-components-address-form__postcode,
+.wc-block-checkout__shipping-fields .wc-block-components-address-form__postcode,
+.wc-block-components-address-form__postcode,
+/* Hide state/region field */
+.wc-block-checkout__billing-fields .wc-block-components-address-form__state-rel,
+.wc-block-checkout__shipping-fields .wc-block-components-address-form__state-rel,
+.wc-block-components-address-form__state-rel,
+/* Additional selectors */
+[id*="billing_state"],
+[id*="shipping_state"],
+[id*="billing_postcode"],
+[id*="shipping_postcode"],
+/* Block editor specific classes */
+.wp-block-woocommerce-checkout-billing-address-block .wc-block-components-address-form__state-rel,
+.wp-block-woocommerce-checkout-billing-address-block .wc-block-components-address-form__postcode {
+    display: none !important;
+}
+
+/* Hide any parent containers that might only contain these fields */
+.wc-block-components-address-form__row:has(.wc-block-components-address-form__state-rel),
+.wc-block-components-address-form__row:has(.wc-block-components-address-form__postcode) {
+    display: none !important;
+}

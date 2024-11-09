@@ -1,0 +1,10 @@
+.custom-checkout-field label {
+    font-weight: bold;
+}
+
+.custom-checkout-field input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
